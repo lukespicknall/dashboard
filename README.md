@@ -1,1 +1,1 @@
-# dashboard
+Dashboard page from The Odin Project.
