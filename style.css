@@ -7,11 +7,12 @@
 .container {
     display: grid;
     height: 100vh;
-    grid-template: 1fr 6fr / 1fr 6fr;
+    grid-template: 1fr 6fr / 1fr 5fr;
     grid-template-areas: 
     "sidebar header"
     "sidebar main-content"
     ;
+    
 }
 
 .header {
@@ -45,4 +46,25 @@
 .main-content {
     grid-area: main-content;
     background-color: rgb(255, 255, 255);
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.tile-container {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr); 
+    gap: 8px;
+    background-color: bisque;
+    
+}
+
+.tile {
+    place-self: center;
+    background-color: white;
+}
+
+.panel {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgb(214, 177, 175);
 }
