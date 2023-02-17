@@ -28,19 +28,20 @@
     display: grid;
     grid-template-rows: 1fr  51r;
     background-color: white;
-    padding: 20px 20px 8px 30px;
+    padding: 20px 30px 8px 30px;
 }
 
 .head {
     display: grid;
-    grid-template-columns: 6fr 1fr 1fr 1fr;
+    grid-template-columns: 8fr 1fr 1fr 1fr;
     /* align-items: center; */
     padding-bottom: 20px;
-
+    /* justify-items: center; */
 }
 
 .head-img {
-width: 1rem;
+width: 2rem;
+border-radius: 50px;
 }
 
 .search {
@@ -59,9 +60,15 @@ width: 1rem;
     font-size: 20px;
 }
 
+.head-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .welcome {
     display: grid;
-    grid-template-columns: 2fr 5fr 2fr 2fr 2fr;
+    grid-template-columns: 1fr 7fr 2fr 2fr 2fr;
 }
 
 .welcome-container {
@@ -72,12 +79,20 @@ width: 1rem;
 .welcome-img {
     display: flex;
     justify-content: center;
-    width:3rem
+    width:3rem;
+    border-radius: 50px;
 }
+
+.welcome-salute, 
+.welcome-name {
+    display: flex;
+    align-items: flex-end;
+}
+
 
 .button-box {
     display: flex;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
 }
 
@@ -88,7 +103,7 @@ width: 1rem;
     height: clamp(32px, 60%, 150px);
     border-radius: 20px;
     border-style: none;
-    background-color: blue;
+    background-color: rgb(77, 99, 226);
     color: white;
 }
 
@@ -96,16 +111,18 @@ width: 1rem;
 
 .sidebar {
     grid-area: sidebar;
-    background-color: rgb(56, 83, 233);
+    background-color: rgb(76, 101, 241);
     color: white;
     display: grid;
-    grid-template-rows: 80px 6fr ;
+    grid-template-rows: 90px 6fr ;
     padding: 20px;
 }
 
-.logo {
+.side-logo {
 display: flex;
-/* align-items: center; */
+align-items: center;
+justify-content: start;
+padding-bottom: 40px;
 
 } 
 
@@ -114,7 +131,7 @@ display: flex;
     grid-template-rows: 1fr 1fr;
     /* padding-top: 20px; */
     font-size: 17px;
-    gap: 100px
+    gap: 50px
 }
 
 .nav-list {
@@ -145,10 +162,15 @@ ul {
 .side-group:hover {
     scale: 1.08;
     transition: .4s;
+    text-shadow: 10px 10px 10px rgb(21, 32, 92);
 }
 
 .side-icon {
     height: 2rem;
+}
+
+.side-icon-logo {
+    height: 40px;
 }
 
 /* svg {
