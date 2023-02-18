@@ -196,11 +196,48 @@ ul {
 }
 
 .tile {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 40fr;
+    grid-template-rows: 1fr 4fr 1fr;
+    gap: 8px;
+    /* align-items: center; */
     background-color: white;
     border-radius: 20px;
+    grid-template-areas: 
+    "tile-color tile-head"
+    "tile-color tile-body"
+    "tile-color tile-foot"
+    ;
+}
+
+.tile-color {
+    grid-area: tile-color;
+    /* fill: red; */
+    background-color: rgb(76, 101, 241);
+    border-radius: 30px 0 0 30px;
+    
+}
+
+.tile-head {
+    grid-area: tile-head;
+    font-size: 18px;
+    padding-top: 8px;
+    /* padding-left: 10px; */
+    
+
+}
+
+.tile-body {
+    grid-area: tile-body;
+    font-size: 14px;
+    /* padding-left: 10px; */
+
+}
+
+.tile-foot {
+    grid-area: tile-foot;
+    /* padding-left: 10px; */
+    /* padding-bottom: 20px; */
 }
 
 .panel {
