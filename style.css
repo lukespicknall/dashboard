@@ -3,11 +3,18 @@
     src: url(fonts/Roboto-Medium.ttf);
 }
 
+:root {
+    --theme-one: #3b82f6;
+    --theme-two: rgb(223, 228, 236);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+
 
 .container {
     font-family: 'roboto';
@@ -52,7 +59,7 @@ border-radius: 50px;
 #search {
     height: 30px;
     width: max(300px, 30vw);
-    background-color: rgb(233, 233, 233);
+    background-color: var(--theme-two);
     border-radius: 25px;
     border-style: none;
     padding-left: 15px;
@@ -64,6 +71,11 @@ border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.head-name {
+    /* display: flex; */
+    align-items: center;
 }
 
 .welcome {
@@ -103,7 +115,7 @@ border-radius: 50px;
     height: clamp(32px, 60%, 150px);
     border-radius: 20px;
     border-style: none;
-    background-color: rgb(77, 99, 226);
+    background-color: var(--theme-one);
     color: white;
 }
 
@@ -111,7 +123,7 @@ border-radius: 50px;
 
 .sidebar {
     grid-area: sidebar;
-    background-color: rgb(76, 101, 241);
+    background-color:var(--theme-one);
     color: white;
     display: grid;
     grid-template-rows: 90px 6fr ;
@@ -129,6 +141,7 @@ padding-bottom: 40px;
 .side-nav {
     display: grid;      
     grid-template-rows: 1fr 1fr;
+    max-height: 10vh;
     /* padding-top: 20px; */
     font-size: 17px;
     gap: 50px
@@ -181,28 +194,41 @@ ul {
 
 .main-content {
     grid-area: main-content;
-    background-color: rgb(255, 255, 255);
+    background-color: var(--theme-two);
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 13fr;
+}
+
+.tile-header{
+    display: flex;
+    background-color: var(--theme-two);
+    padding-left: 20px;
+    font-size: 18px;
+    align-items: flex-end;
 }
 
 .tile-container {
     display: grid;
     grid-template: repeat(3, 1fr) / repeat(2, 1fr); 
     gap: 20px;
-    background-color: rgb(235, 235, 235);
-    padding: 20px;
+    background-color: var(--theme-two);
+    padding: 8px 20px 20px 20px;
+    
     
 }
 
 .tile {
     display: grid;
     grid-template-columns: 1fr 40fr;
-    grid-template-rows: 1fr 4fr 1fr;
+    grid-template-rows: 2fr 6fr 2fr;
     gap: 8px;
+    min-width: 312px;
+    overflow: hidden;
+    /* min-width: 200px; */
     /* align-items: center; */
     background-color: white;
-    border-radius: 20px;
+    border-radius: 3%;
     grid-template-areas: 
     "tile-color tile-head"
     "tile-color tile-body"
@@ -213,15 +239,15 @@ ul {
 .tile-color {
     grid-area: tile-color;
     /* fill: red; */
-    background-color: rgb(76, 101, 241);
-    border-radius: 30px 0 0 30px;
+    background-color: #F6AF3B;
+    /* border-radius: 30px 0 0 30px; */
     
 }
 
 .tile-head {
     grid-area: tile-head;
     font-size: 18px;
-    padding-top: 8px;
+    padding-top: 15px;
     /* padding-left: 10px; */
     
 
@@ -239,18 +265,38 @@ ul {
     /* padding-left: 10px; */
     /* padding-bottom: 20px; */
 }
-
+.panel-header {
+    display: flex;
+    background-color: var(--theme-two);
+    padding-left: 20px;
+    font-size: 18px;
+    align-items: end
+}
 .panel {
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 20px;
-    background-color: rgb(235, 235, 235);
-    padding: 20px;
+    grid-template-rows: 10fr 1fr 10fr;
+    /* gap: 20px; */
+    max-height: 90vh;
+    background-color: var(--theme-two);
+    padding: 0 20px 20px 20px;
+}
+
+.trend-head {
+    display: flex;
+    align-items: end;
+    font-size: 18px;
 }
 
 .panel-one,
 .panel-two {
     background-color: white;
     padding: 20px;
-    border-radius: 20px;
+    margin-top: 8px;
+    border-radius: 3%;
+    height: clamp(250px, 40vh, 600px);
+    min-width: 220px;
+}
+
+.panel-one {
+    margin-bottom: 20px;
 }
