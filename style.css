@@ -335,6 +335,7 @@ li {
         display: flex;
         justify-content: center;
         align-self: center;
+        gap: 0;
     }
 
     .side-group li {
@@ -345,6 +346,10 @@ li {
     .side-logo-brand {
         width: 0;
         overflow: hidden;
+    }
+
+    .nav-list {
+        justify-content: center;
     }
 }
 
@@ -365,6 +370,10 @@ li {
 
 
 @media only screen and (max-width: 700px) {
+    .header {
+        padding: 20px 10px 15px 10px;
+    }
+    
     .main-content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 30fr;
@@ -405,14 +414,36 @@ li {
     }
 
     .welcome-name {
-        min-width: 253px;
+        min-width: 230px;
     }
 
     .button-box {
         height: 0;
     }
 
+    .sidebar{
+        /* padding: 20px 0px 10px 5px; */
+        max-width: 60px;
+    }
+
+    /* .side-logo {
+        display: flex;
+        justify-content: center;
+    } */
+
     .tile {
-        min-width: 300px;
+        min-width: 280px;
+    }
+
+    .tile-header{
+        padding-left: 10px;
+    }
+
+    .tile-container {
+        padding: 8px 10px 20px 10px;
+    }
+
+    .panel {
+        padding: 0 10px 20px 20px;
     }
 }
