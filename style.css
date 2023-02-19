@@ -25,7 +25,6 @@
     "sidebar header"
     "sidebar main-content"
     ;
-    
 }
 
 /* ---------------HEADER--------------------------- */
@@ -141,6 +140,7 @@
     display: grid;
     grid-template-rows: 90px 6fr ;
     padding: 20px;
+    transition: ease all .4s;
 }
 
 .side-logo {
@@ -155,7 +155,7 @@
     grid-template-rows: 1fr 1fr;
     max-height: 10vh;
     font-size: 17px;
-    gap: 50px
+    gap: 50px;
 }
 
 .nav-list {
@@ -175,16 +175,19 @@ ul {
     list-style: none;
 }
 
+li {
+    transition: .5s;
+}
+
 .side-group {
     display: grid;
     grid-template-columns: 3em 3fr;
     align-items: center;
-    gap: 7px
+    gap: 7px;
 }
 
 .side-group:hover {
     scale: 1.08;
-    transition: .4s;
     text-shadow: 10px 10px 10px rgb(21, 32, 92);
 }
 
@@ -193,6 +196,7 @@ ul {
 }
 
 .side-icon-logo {
+    transition: 1s;
     height: 40px;
 }
 
@@ -344,6 +348,7 @@ ul {
     }
 }
 
+
 @media only screen and (max-width: 1030px) {
     .welcome-name {
         font-size: 21px;
@@ -358,10 +363,17 @@ ul {
     }
 }
 
+
 @media only screen and (max-width: 700px) {
     .main-content {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 30fr;
+    }
+
+    .head-right {
+        width: 0;
+        height: 0;
+        overflow: hidden;
     }
 
     .welcome-name {
@@ -377,6 +389,7 @@ ul {
     }
 
     #search{
+        width: max(240px, 50vw);
         margin-left: 10px;
     }
 
@@ -388,9 +401,18 @@ ul {
     .welcome {
         grid-template-columns: 1fr 13fr;
         grid-template-rows: 1fr;
+        min-width: 253px;
     }
-    
-     .button-box {
+
+    .welcome-name {
+        min-width: 253px;
+    }
+
+    .button-box {
         height: 0;
-     }
+    }
+
+    .tile {
+        min-width: 300px;
+    }
 }
