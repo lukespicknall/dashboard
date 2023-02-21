@@ -136,6 +136,7 @@
 .sidebar {
     grid-area: sidebar;
     background-color:var(--theme-one);
+    /* max-width: 265px; */
     color: white;
     display: grid;
     grid-template-rows: 90px 6fr ;
@@ -304,7 +305,6 @@ li {
 .panel-one,
 .panel-two {
     display: grid;  
-    grid-template-rows: repeat(3, 1fr) ;
     background-color: white;
     padding: 20px;
     margin-top: 8px;
@@ -314,6 +314,7 @@ li {
 }
 
 .panel-one {
+    grid-template-rows: repeat(3, 1fr) ;
     margin-bottom: 20px;
 }
 
@@ -341,6 +342,45 @@ li {
 .divider {
     border-bottom: 1px solid  rgb(189, 188, 188);
 }
+
+
+.panel-two {
+    display: grid; 
+    grid-template-rows: repeat(4, 1fr) ;
+    gap:20px;
+    height: 100%;
+}
+
+.trend-container {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+
+.trend-body {
+display: grid;
+grid-template-rows: 1fr 1fr;
+height: min-content;
+gap: 4px
+}
+
+.trend-img {
+max-width: 3rem;
+max-height: 3rem ;
+}
+
+.trend-name{
+    font-size: 13px;
+}
+
+.trend-title {
+    font-size: 10px;
+    color: rgb(119, 118, 118);
+    height: min-content;
+}
+
+
 
 /* -----------Mobile-------------- */
 
